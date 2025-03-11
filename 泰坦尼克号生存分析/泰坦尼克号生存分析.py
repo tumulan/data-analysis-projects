@@ -15,7 +15,7 @@ test_data = pd.read_csv('test.csv')
 # 查看数据基本信息
 print(train_data.info())
 print(test_data.info())
-
+print("----------------------------------")
 # 处理缺失值
 train_data['Age'] = train_data['Age'].fillna(train_data['Age'].median())  # 年龄用中位数填充
 train_data['Embarked'] = train_data['Embarked'].fillna(train_data['Embarked'].mode()[0])  # 登船港口用众数填充
@@ -134,23 +134,23 @@ plt.ylabel('Feature')
 plt.title('Feature Importance (Logistic Regression Coefficients)')
 plt.show()
 
-from sklearn.metrics import confusion_matrix
-import seaborn as sns
+# from sklearn.metrics import confusion_matrix
+# import seaborn as sns
+#
+# # 计算混淆矩阵
+# cm = confusion_matrix(y_val, y_pred)
 
-# 计算混淆矩阵
-cm = confusion_matrix(y_val, y_pred)
+# # 绘制混淆矩阵热力图
+# plt.figure(figsize=(6, 6))
+# sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+#             xticklabels=['Predicted 0', 'Predicted 1'],
+#             yticklabels=['Actual 0', 'Actual 1'])
+# plt.xlabel('Predicted')
+# plt.ylabel('Actual')
+# plt.title('Confusion Matrix')
+# plt.show()
 
-# 绘制混淆矩阵热力图
-plt.figure(figsize=(6, 6))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
-            xticklabels=['Predicted 0', 'Predicted 1'],
-            yticklabels=['Actual 0', 'Actual 1'])
-plt.xlabel('Predicted')
-plt.ylabel('Actual')
-plt.title('Confusion Matrix')
-plt.show()
+# from sklearn.metrics import classification_report
 
-from sklearn.metrics import classification_report
-
-# 打印分类报告
-print(classification_report(y_val, y_pred, target_names=['Not Survived', 'Survived']))
+# # 打印分类报告
+# print(classification_report(y_val, y_pred, target_names=['Not Survived', 'Survived']))
