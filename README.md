@@ -13,7 +13,7 @@
 ### 1. 泰坦尼克号生存分析
 - **目标**: 分析乘客生存率与性别、舱位等级的关系
 - **技术点**: 缺失值处理、特征工程、逻辑回归
-- [查看完整报告](projects/notebooks/01_titanic_survival_analysis.ipynb)
+- [查看完整报告](data-analysis-projects/泰坦尼克号生存分析/分析报告.ipynb)
 - **关键结论**: 女性生存率比男性高3倍（74% vs 19%）
 
 ![生存率可视化](projects/plots/survival_by_sex.png)  <!-- 后续添加图片 -->
